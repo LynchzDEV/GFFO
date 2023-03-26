@@ -1,5 +1,9 @@
 package Game;
 
+import Game.Event.ChestEvent;
+import Game.Event.Event;
+import Game.Event.HealingFountainEvent;
+import Game.Event.TrappedChestEvent;
 import entities.*;
 import java.util.*;
 import utilities.*;
@@ -10,19 +14,19 @@ public class TextBasedGame extends game {
     private List<Enemy> enemies;
     private Enemy boss;
     private Inventory inventory;
-
+    Scanner sc = new Scanner(System.in);
+    Random rand = new Random();
     public TextBasedGame() {
         inventory = new Inventory();
     }
 
     @Override
     public void play() {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Welcome to the game!");
-        System.out.println("Enter your Hero Name: ");
 
+        System.out.println("Welcome to the game!");
+        System.out.print("Enter your Hero Name: ");
         String name = sc.nextLine();
-        hero = new Hero(name, 100, 1000, 10, 1);
+        hero = new Hero(name, 100, 1000, 0, 1);
         enemies = new ArrayList<Enemy>();
         Enemy[] enemyType = {
                 new Enemy("Goblin", 50, 5, 5, 1, 10, 20),
@@ -42,20 +46,18 @@ public class TextBasedGame extends game {
 
     @Override
     public boolean gameLoop() {
-        Scanner sc = new Scanner(System.in);
-        Random rand = new Random();
-        
         // Random Enemy encounter
         int enemyIndex = rand.nextInt(enemies.size());
         Enemy enemy = enemies.get(enemyIndex);
-        int eventPercent = rand.nextInt(100);
-
-        if (eventPercent > 70) {
+        boolean foundEvent = rand.nextInt(100) > 80;
+        if (foundEvent) {
             // Encounter
-            encounter(enemy);
+            foundEvent();
+            System.out.println();
         } else {
             // Event
-            
+            encounter(enemy);
+            System.out.println();
         }
         return hero.isAlive() && enemies.stream().anyMatch(Enemy::isAlive);
     }
@@ -77,21 +79,13 @@ public class TextBasedGame extends game {
         // Trigger an event
         Scanner sc = new Scanner(System.in);
         Random rand = new Random();
-        boolean badLuck = rand.nextBoolean();
-        System.out.println("You have found an event!");
-        System.out.println("You came across a chest! What do you want to do?");
-        System.out.println("1. Open it");
-        System.out.println("2. Leave it");
-        int choice = sc.nextInt();
-        if (choice == 1 && !badLuck) {
-
-            // TODO:
-            System.out.println("You have found! -- --");
-        } else if (choice == 1 && badLuck) {
-            System.out.println("The box turn into a Mimic!");
-            // TODO:
-            hero.takeDamage(10);
-        }
+        Event[] events = {
+                new ChestEvent(),
+                new HealingFountainEvent(),
+                new TrappedChestEvent()
+        };
+        int everyIndex = rand.nextInt(events.length);
+        events[everyIndex].trigger(hero, sc);
 
     }
 
@@ -101,8 +95,7 @@ public class TextBasedGame extends game {
         boolean escapeSuccess = false;
         System.out.println("You have encountered a " + enemy.getName());
         
-        while (hero.isAlive() && enemy.isAlive() && !escapeSuccess) {
-            
+        while (hero.isAlive() && enemy.isAlive()) {
             System.out.println("What do you want to do?");
             System.out.println("1. Attack");
             System.out.println("2. Use Item");
