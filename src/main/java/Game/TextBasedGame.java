@@ -114,6 +114,10 @@ public class TextBasedGame extends game {
                 case 1:
                     // Attack
                     hero.attack(enemy);
+                    if(!enemy.isAlive()) {
+                        System.out.println("You have defeated the " + enemy.getName());
+                        break;
+                    }
                     enemy.attack(hero);
                     break;
                 case 2:
@@ -140,7 +144,7 @@ public class TextBasedGame extends game {
                     if (escapePercent > 50) {
                         System.out.println("You have escaped!");
                         escapeSuccess = true;
-                        return;
+                        break;
                     } else {
                         enemy.attack(hero);
                         System.out.println("You failed to escape!");
@@ -149,6 +153,9 @@ public class TextBasedGame extends game {
                 default:
                     System.out.println("Invalid choice");
                     break;
+            }
+            if(escapeSuccess) {
+                break;
             }
 
         }
