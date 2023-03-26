@@ -24,4 +24,13 @@ public class Potion extends Item {
         System.out.printf("%s used %s.%n", hero.getName(), name);
         hero.heal(healingPower);
     }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("Potion{");
+        sb.append("name='").append(name).append('\'');
+        sb.append(", healingPower=").append(healingPower);
+        sb.append('}');
+        return sb.toString();
+    }
 }

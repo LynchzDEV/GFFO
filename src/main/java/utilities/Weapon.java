@@ -28,4 +28,14 @@ public class Weapon extends Item {
     public void use(Hero hero) {
         System.out.println("you can't use this item!");
     }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("Weapon{");
+        sb.append("Name=").append(getName());
+        sb.append(",attackPower=").append(attackPower);
+        sb.append(", levelRequirement=").append(levelRequirement);
+        sb.append('}');
+        return sb.toString();
+    }
 }

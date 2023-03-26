@@ -6,6 +6,8 @@ import Game.Event.HealingFountainEvent;
 import Game.Event.TrappedChestEvent;
 import entities.*;
 import java.util.*;
+
+import entities.Class.Warrior;
 import utilities.*;
 
 public class TextBasedGame extends game {
@@ -26,7 +28,7 @@ public class TextBasedGame extends game {
         System.out.println("Welcome to the game!");
         System.out.print("Enter your Hero Name: ");
         String name = sc.nextLine();
-        hero = new Hero(name, 100, 1000, 0, 1);
+        hero = new Hero(name, new Warrior(), 1);
         enemies = new ArrayList<Enemy>();
         Enemy[] enemyType = {
                 new Enemy("Goblin", 50, 5, 5, 1, 10, 20),
