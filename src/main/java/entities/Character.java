@@ -15,7 +15,7 @@ public abstract class Character {
         this.level = level;
     }
 
-    public String getName(){
+    public String getName() {
         return name;
     }
 
@@ -24,12 +24,22 @@ public abstract class Character {
     public void takeDamage(int damage) {
         int actualDamage = Math.max(0, damage - defense);
         health -= actualDamage;
+        System.out.println(name + " takes " + damage + " damage.");
+        System.out.println(name + " has " + getHealth() + " health left.");
         if (health <= 0) {
             die();
         }
     }
 
+    public int getHealth() {
+        return health;
+    }
+
     public void die() {
         System.out.println(name + " has died.");
+    }
+
+    public boolean isAlive() {
+        return health > 0;
     }
 }

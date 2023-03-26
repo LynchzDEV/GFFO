@@ -1,6 +1,7 @@
 package utilities;
 
 import entities.Character;
+import entities.Hero;
 
 public class Weapon extends Item {
     private int attackPower;
@@ -14,10 +15,17 @@ public class Weapon extends Item {
 
     public void attack(Character target) {
         System.out.println("You attack " + target.getName() + " with " + getName() + ".");
+        System.out.println(target.getName() + " takes " + attackPower + " damage.");
+        System.out.println(target.getName() + " has " + target.getHealth() + " health left.");
         target.takeDamage(attackPower);
     }
 
     public int getLevelRequirement() {
         return levelRequirement;
+    }
+
+    @Override
+    public void use(Hero hero) {
+        System.out.println("you can't use this item!");
     }
 }

@@ -28,6 +28,10 @@ public class Hero extends Character {
         }
     }
 
+    public void heal(int healingPower) {
+        health += healingPower;
+    }
+
     public void gainExp(int exp) {
         experiencePoints += exp;
         System.out.println(name + " gains " + exp + " experience points.");
@@ -75,18 +79,23 @@ public class Hero extends Character {
             System.out.println(name + " cannot equip " + armor.getName() + " (requires level "
                     + armor.getLevelRequirement() + ").");
         }
-        }
     }
 
     public void addItemToInventory(Item item) {
-
+        inventory.add(item);
+        System.out.println(name + " adds " + item.getName() + " to their inventory.");
     }
 
     public void useItem(Item item) {
-
+        if (inventory.contains(item)) {
+            item.use(this);
+            inventory.remove(item);
+        } else {
+            System.out.println(name + " does not have " + item.getName() + " in their inventory.");
+        }
     }
 
-    public List<item> getInventory() {
+    public List<Item> getInventory() {
         return inventory;
     }
 
