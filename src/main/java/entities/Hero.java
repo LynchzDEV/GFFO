@@ -25,7 +25,6 @@ public class Hero extends Character {
             weapon = rogue.getWeapon();
             armor = rogue.getArmor();
         }
-
         inventory = heroClass.getStartingItems();
     }
 
