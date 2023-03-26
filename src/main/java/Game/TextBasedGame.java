@@ -64,7 +64,6 @@ public class TextBasedGame extends game {
 
     @Override
     public void endGame() {
-        // TODO Auto-generated method stub
         System.out.println("Game Over");
         if (hero.isAlive()) {
             System.out.println("Congratulations, " + hero.getName() + "! You have defeated the boss and saved the world!");
@@ -75,7 +74,6 @@ public class TextBasedGame extends game {
     }
 
     public void foundEvent() {
-        // TODO Auto-generated method stub
         // Trigger an event
         Scanner sc = new Scanner(System.in);
         Random rand = new Random();
@@ -86,7 +84,6 @@ public class TextBasedGame extends game {
         };
         int everyIndex = rand.nextInt(events.length);
         events[everyIndex].trigger(hero, sc);
-
     }
 
     public void encounter(Enemy enemy) {
