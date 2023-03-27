@@ -15,4 +15,12 @@ public abstract class Item {
     }
 
     public abstract void use(Hero hero);
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("Item{");
+        sb.append("name='").append(name).append('\'');
+        sb.append('}');
+        return sb.toString();
+    }
 }

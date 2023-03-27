@@ -25,7 +25,7 @@ public abstract class Character {
         int actualDamage = Math.max(0, damage - defense);
         health -= actualDamage;
         System.out.println(name + " takes " + damage + " damage.");
-        System.out.println(name + " has " + getHealth() + " health left.");
+        System.out.println(name + " has " + Math.max(0, getHealth()) + " health left.");
         if (health <= 0) {
             die();
         }

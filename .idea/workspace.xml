@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0fc1bca3-4dc3-4bf7-bff6-ad62dbfd588a" name="Changes" comment="Finished Classes Feature">
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RPG_Project.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entities/Class/Classes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entities/Class/Paladin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entities/Class/Rogue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entities/Class/Warrior.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/Game/Event/ChestEvent.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/Game/Event/Event.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/Game/Event/HealingFountainEvent.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/Game/Event/TrappedChestEvent.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/entities/Class/Classes.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/entities/Class/Paladin.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/entities/Class/Rogue.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/entities/Class/Warrior.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/Hero.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Rebase.Settings">
+    <option name="NEW_BASE" value="First_Branch_Classes" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="First_Branch_Classes" />
+      </map>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="workspaceImportEnabled" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2NYO6yHIwa3fOudFaMV5zBKr3Bb" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="RPG_Project" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="lynchz.rpg_project.RPG_Project" />
+      <module name="RPG_Project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="lynchz.rpg_project.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.RPG_Project" />
+        <item itemvalue="Application.RPG_Project" />
+        <item itemvalue="Application.RPG_Project" />
+        <item itemvalue="Application.RPG_Project" />
+        <item itemvalue="Application.RPG_Project" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0fc1bca3-4dc3-4bf7-bff6-ad62dbfd588a" name="Changes" comment="" />
+      <created>1679837380331</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1679837380331</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Final Event Feature">
+      <created>1679844428291</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1679844428292</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Final Event Feature">
+      <created>1679844436411</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1679844436411</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Finished Classes Feature">
+      <created>1679848835195</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1679848835195</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Final Event Feature" />
+    <MESSAGE value="Finished Classes Feature" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished Classes Feature" />
+  </component>
+</project>
